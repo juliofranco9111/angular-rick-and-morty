@@ -1,0 +1,31 @@
+
+<app-loading *ngIf="loading" class="m-5 animated fadeIn"></app-loading>
+
+
+ <div class="btn-group-wrap text-center" role="group" aria-label="Basic example" *ngIf="!loading">
+    <button (click)="restaPage()" type="button" class="btn btn-lg mt-5 mr-2 btn-secondary">Anterior</button>
+    
+    <button (click)="sumaPage()" type="button" class="btn btn-lg mt-5 btn-secondary">Siguiente</button>
+  </div>
+
+
+
+
+<div class="card-columns m-5" *ngIf="!loading">
+    <div (click)="getPersonaje(personaje.id)" class="card selectable animated fadeIn" *ngFor="let personaje of personajes">
+      <img [src]="personaje.image" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{personaje.name}}</h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                Apariciones en episodios: {{personaje.episode.length}}
+            </li>
+            <li class="list-group-item">
+                Status: {{personaje.status}}
+            </li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+<img src="assets/img/pepinillo.png" id="pepinillo" alt="">

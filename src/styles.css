@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+.selectable{
+    cursor: pointer;
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+#footer{
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+}
+
+#pepinillo{
+    position: fixed;
+    width: 12%;
+    right: 2%;
+    bottom: 15vh;
+    transition: all 400ms;
+}
+
+#pepinillo:hover{
+    transform: scale(1.2);
+}
+
+
+#jerry{
+    position: fixed;
+    width: 16%;
+    left: 2%;
+    bottom: 15vh;
+    transition: all 500ms;
+}
+
+#jerry:hover{
+    transform: rotate(360deg)
+}
+
+#morty{
+    position: fixed;
+    display: block;
+    width: 13%;
+    left: 2%;
+    bottom: 25vh;
+    transition: all 500ms;
+}
+
+#morty:hover{
+    transform: scale(1.2);
+}
